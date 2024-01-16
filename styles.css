@@ -15,9 +15,71 @@ header {
 #banner {
     width: 1100px;
     height: 250px;
-    background-color: #F9EAEA;
+    background-color: #D2EDD1;
     margin: auto;
+    position: relative;
 }
+
+#banner #butterfly {
+    width: 5%;
+    height: auto;
+    position: relative;
+    animation-name: flyingButterfly;
+    animation-duration: 5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes flyingButterfly {
+    0%, 100% {
+      bottom: 100%;
+      left: -40%;
+    }
+    25% {
+      bottom: 50%;
+      left: -25%;
+    }
+    50% {
+        bottom: 100%;
+        left: 0;
+      }
+    75% {
+        bottom: 70%;
+        left: 25%;
+      }
+    100% {
+        bottom: 100%;
+        left: calc(50% - 100px);
+      }
+
+  }
+
+#banner #flowers {
+    animation: fadeIn 1s forwards;
+    opacity: 0;
+    margin: auto;
+    width: 100%;
+    height: auto;
+    border: solid 5px #AAD1A7;
+    border-radius: 20px;
+    border-radius: 20px;
+}
+
+#banner:hover #flowers {
+    animation: fadeOut 1s forwards;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+ }
+
+ @keyframes fadeOut {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+ }
 
 main {
     display: flex;
@@ -71,6 +133,10 @@ main ul li a {
     margin-bottom: 5%;
     border-radius: 20px;
     box-shadow: 1px 10px 20px -3px rgba(50,50,50,0.10);
+}
+
+main ul li a:hover {
+    background-color: #F2F2F2;
 }
 
 footer {
