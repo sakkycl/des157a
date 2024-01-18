@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>JS Experimentation</title>
+    </head>
+
+    <body>
+
+        <h1>Experiment 1</h1>
+        <h2>Open console to view the code</h2>
+
+        <script>
+
+            /* Write a program that takes a lowercase string and capitalizes 
+            the first letter of each word in the string.*/
+
+            var myWords = "the first letter of each word is capitalized";
+            var eachWord = myWords.split(" ");
+            eachWord.join(" ");
+            
+            for (i=0; i < eachWord.length; i++){
+                console.log(eachWord[i][0].toUpperCase() + eachWord[i].substr(1));
+            }
+
+            
+
+        </script>
+
+    </body>
+
+</html>

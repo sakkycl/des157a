@@ -136,7 +136,7 @@ main ul li a {
 }
 
 main ul li a:hover {
-    background-color: #F2F2F2;
+    background-color: #f2f2f2;
 }
 
 footer {
@@ -152,3 +152,4 @@ address a {
     text-decoration: none;
     color: #333333;
 }
+
