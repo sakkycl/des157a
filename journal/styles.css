@@ -139,7 +139,7 @@ article p a {
 }
 
 article p a:hover {
-    background-color: #f2f2ff;
+    background-color: #f2f2f2;
 }
 
 article ul {
@@ -162,7 +162,7 @@ article ul li a {
 }
 
 article ul li a:hover {
-    background-color: #f2f2ff;
+    background-color: #f2f2f2;
 }
 
 footer {
