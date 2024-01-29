@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>JS Experimentation: Functions & DOM</title>
+    </head>
+
+    <body>
+
+        <h1>Experiment 2</h1>
+        <p>Here is some text</p>
+
+        <script>
+
+            /*Ask users to input their favorite color. Then change the 
+            background color of the page to that color.*/
+
+            var colorOptions = ['red', 'orange', 'yellow', 'green', 'blue', 
+            'purple', 'pink'];
+          
+            function myPrompt() {
+              var favColor = prompt('What is your favorite color?');
+
+              if (colorOptions.includes(favColor)) {
+                return favColor; 
+              } else {
+                alert('Please choose another color.');
+                return null; 
+              }
+            }
+
+            function changeBackgroundColor(color) {
+              if (color) {
+                document.body.style.backgroundColor = color;
+
+                var allPs = document.getElementsByTagName('p');
+                for (var eachP of allPs){
+                    eachP.innerHTML = `Your favorite color is ${color}!`;
+                }
+            }
+            }
+
+            var selectedColor = myPrompt();
+
+            changeBackgroundColor(selectedColor);
+
+          </script>
+
+    </body>
+
+</html>
