@@ -68,10 +68,10 @@ main {
     display: flex;
     justify-content: center;
     background-color: #FFFFFF;
-    padding-top: 5%;
-    padding-bottom: 5%;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
     text-align: left;
 }
 
@@ -114,9 +114,20 @@ main article {
     border-radius: 20px;
     margin-left: 1%;
     margin-right: 1%;
+    margin-bottom: 5%;
     display: flex;
     flex-direction: column;
     flex: 1;
+}
+
+main article p {
+    margin-bottom: 0;
+}
+
+.rightColum {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
 }
 
 article p a {
