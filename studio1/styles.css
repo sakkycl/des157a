@@ -1,0 +1,89 @@
+body {
+    max-width: 1200px;
+    font-family: 'Baloo 2', sans-serif;
+    margin: auto;
+    background-color: #CEB7C3;
+    color: #000000;
+
+}
+
+h1 {
+    font-family: 'Reggae One', system-ui;
+    text-align: center;
+    text-shadow: -0.1em -0.1em #CEB7C3;
+}
+
+header {
+    background-image: url(images/headerbg.png);
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 5%;
+    padding: 5%;
+    padding-right: 5%;
+    padding-bottom: 2%;
+}
+
+main {
+    padding-left: 30%;
+    padding-right: 30%;
+    padding-top: 5%;
+    padding-bottom: 10%;
+    font-size: 0.6em;
+    background-color: #f2f2f2;
+}
+
+div {
+    background-color: #F9DBE6;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    border: 2px solid #F9DBE6;
+    border-radius: 10px;
+    box-shadow: -1.5em -1.5em #CEB7C3;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    line-height: 2em;
+}
+
+input {
+    z-index: 1;
+}
+
+input[type=text] {
+    margin-top: 0;
+}
+
+input[type=submit] {
+    margin: 5%;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+}
+
+input[type=submit]:hover {
+    background-color: #f2f2f2;
+}
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.showing {
+    visibility: visible;
+    opacity: 1;
+}
+
+article {
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    right: 35%;
+    font-size: 1.5em;
+    color: #ffffff;
+}
+

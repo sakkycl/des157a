@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Studio 1: Mad Libs</title>
+        
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&family=Reggae+One&display=swap" rel="stylesheet">
+
+        <link href="styles.css" rel="stylesheet">
+
+        <script src="script.js" defer></script> 
+
+    </head>
+
+    <body>
+        <header>
+            <h1>SIGNS YOUR CAT IS</h1>
+            <h1>TRYING TO KILL YOU</h1>
+        </header>
+
+        <main>
+            <div class="showing">
+                <h2>Enter the information below:</h2>
+                <form>
+                    <label for="adj">Adjective: </label>
+                    <input type="text" id="adj">
+    
+                    <label for="antonymAdj">Anytonym of the prevous adjective: </label>
+                    <input type="text" id="antonymAdj">
+    
+                    <label for="synonymAdj">Synonym of the previous adjective: </label>
+                    <input type="text" id="synonymAdj">
+    
+                    <label for="place">Place in your home: </label>
+                    <input type="text" id="place">
+    
+                    <label for="hBodyPart">Human body part: </label>
+                    <input type="text" id="hBodyPart">
+    
+                    <label for="hBodyPart2">Another human body part: </label>
+                    <input type="text" id="hBodyPart2">
+    
+                    <label for="fBodyPart">Feline body part: </label>
+                    <input type="text" id="fBodyPart">
+    
+                    <label for="place2">Another place in your home: </label>
+                    <input type="text" id="place2">
+    
+                    <label for="animal">Animal: </label>
+                    <input type="text" id="animal">
+    
+                    <label for="fBodyPart2">Another feline body part: </label>
+                    <input type="text" id="fBodyPart2">
+    
+                    <label for="verb">Verb: </label>
+                    <input type="text" id="verb">
+                    
+                    <input type="submit" class="open" value="submit">
+                </form>
+            </div>
+
+            <article id="madlib">
+                <p id="intro" class="hidden"></p>
+                <ol id="signs" class="hidden">
+                    <li><span id="signOne"></span></li>
+                    <li><span id="signTwo"></span></li>
+                    <li><span id="signThree"></span></li>
+                    <li><span id="signFour"></span></li>
+                    <li><span id="signFive"></span></li>
+                    <li><span id="signSix"></span></li>
+                </ol>
+            </article>
+
+        </main>
+    </body>
+</html>
