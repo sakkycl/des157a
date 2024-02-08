@@ -84,14 +84,14 @@
 
             // hide form and show intro text
             document.getElementById(`intro`).className = 'showing';
-            document.querySelector(`div`).className = 'hidden';
+            document.getElementById(`maincontent`).className = 'hidden';
 
             introText = `The words “${adj}” and “cat” do not belong 
             together! They are ${antonymAdj} creatures harboring ${synonymAdj} 
             thoughts. Beware of these signs!`;
 
-            document.querySelector("main").style.backgroundImage = "url(images/mainbg.png)";
-            document.querySelector("main").style.backgroundSize = "cover";
+            /*document.querySelector("main").style.backgroundImage = "url(images/mainbg.png)";
+            document.querySelector("main").style.backgroundSize = "cover";*/
 
             document.querySelector('#adj').value='';
             document.querySelector('#antonymAdj').value='';
@@ -170,7 +170,7 @@
 
             // hide form and show signs text
             document.getElementById(`signs`).className = 'showing';
-            document.querySelector(`div`).className = 'hidden';
+            document.getElementById(`maincontent`).className = 'hidden';
 
             document.getElementById('signOne').textContent = `Hiding in dark 
             places: Dark places are where all evil plots are born. Not only are 

@@ -1,47 +1,39 @@
 body {
-    max-width: 1200px;
     font-family: 'Baloo 2', sans-serif;
-    margin: auto;
-    background-color: #CEB7C3;
-    color: #000000;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #910000;
+    color: #ffffff;
 
-}
-
-h1 {
-    font-family: 'Reggae One', system-ui;
-    text-align: center;
-    text-shadow: -0.1em -0.1em #CEB7C3;
 }
 
 header {
-    background-image: url(images/headerbg.png);
-    background-position: bottom left;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding-top: 5%;
-    padding: 5%;
-    padding-right: 5%;
-    padding-bottom: 2%;
+    text-align: center;
+    padding: 4%;
+}
+
+header img {
+    max-width: 50%;
+    text-align: center;
 }
 
 main {
-    padding-left: 30%;
-    padding-right: 30%;
-    padding-top: 5%;
-    padding-bottom: 10%;
-    font-size: 0.6em;
-    background-color: #f2f2f2;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 1em;
+    text-align: center;
 }
 
-div {
-    background-color: #F9DBE6;
-    padding-left: 15%;
-    padding-right: 15%;
-    padding-top: 5%;
-    padding-bottom: 5%;
-    border: 2px solid #F9DBE6;
-    border-radius: 10px;
-    box-shadow: -1.5em -1.5em #CEB7C3;
+#catthinks {
+    max-width: 30%;
+    padding-top: 4%;
+}
+
+#maincontent {
+    background-color: #000000;
+    text-align: left;
 }
 
 form {
@@ -65,7 +57,7 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-    background-color: #f2f2f2;
+    background-color: #BCBEC0;
 }
 
 .hidden {
@@ -76,14 +68,77 @@ input[type=submit]:hover {
 .showing {
     visibility: visible;
     opacity: 1;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    background-color: #000000;
+    border: 2px solid #000000;
+    border-radius: 10px;
 }
 
 article {
     position: absolute;
-    top: 30%;
-    left: 35%;
-    right: 35%;
+    top: 25%;
+    left: 5%;
+    right: 5%;
+    bottom: 45%;
     font-size: 1.5em;
     color: #ffffff;
+}
+
+#intro {
+    padding: 5%;
+    margin-top: 0;
+}
+
+#signs {
+    padding: 5%;
+    margin-top: -10%;
+    margin-bottom: 20%;
+}
+
+@media only screen and (min-width: 600px) {
+
+    body {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-areas: 
+        "A A A B B B B B"
+        "A A A B B B B B"
+        "A A A B B B B B"
+        "A A A B B B B B";
+    }
+
+    header {
+        grid-area: A;
+        padding-top: 50%;
+    }
+
+    header img {
+        max-width: 75%;
+    }
+
+    main {
+        grid-area: B;
+    }
+
+    #maincontent {
+        margin-top: 10%;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+
+    #madlib {
+        left: 45%;
+        top: 5%;
+        text-align: left;
+    }
+
+    #signs {
+        padding: 10%;
+    }
+
 }
 
