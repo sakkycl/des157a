@@ -190,3 +190,13 @@ address a {
     color: #333333;
 }
 
+figure {
+    text-align: center;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    border: none;
+    border-radius: 10px;
+}

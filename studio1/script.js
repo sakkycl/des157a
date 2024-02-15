@@ -90,9 +90,6 @@
             together! They are ${antonymAdj} creatures harboring ${synonymAdj} 
             thoughts. Beware of these signs!`;
 
-            /*document.querySelector("main").style.backgroundImage = "url(images/mainbg.png)";
-            document.querySelector("main").style.backgroundSize = "cover";*/
-
             document.querySelector('#adj').value='';
             document.querySelector('#antonymAdj').value='';
             document.querySelector('#synonymAdj').value='';
