@@ -62,7 +62,7 @@ main img {
 #page {
     text-align: center;
     margin-bottom: -2%;
-    color: #F37E61;
+    color: #9C6C43;
     padding-left: 2%;
     padding-right: 2%;
     display: flex;
@@ -93,11 +93,6 @@ main img {
         margin: 5%;
         display: grid;
         grid-template-columns: repeat(8, 1fr);
-        /*grid-template-areas: 
-        "A A A B B B B B"
-        "A A A B B B B B"
-        "A A A B B B B B"
-        "A A A B B B B B";*/
         grid-template-areas: 
         "A A A A A A A A"
         "B B B C C C C C"
