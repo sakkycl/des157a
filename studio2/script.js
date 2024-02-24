@@ -74,7 +74,7 @@
 
         //input values
         const aboutHeader = document.querySelector('h2');
-        const aboutPara = document.querySelector('paragraphs');
+        const aboutPara = document.querySelector('#paragraphs');
 
         //change about text
         if(currentIndex == '19'){
