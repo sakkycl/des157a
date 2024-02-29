@@ -1,0 +1,125 @@
+body {
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 1.4em;
+    font-style: normal;
+    color: #ffffff;
+    background: #8586BB;
+    margin: auto;
+}
+
+header {
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+header img {
+    max-width: 75%;
+    height: auto;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    border: 0.5em solid #ffffff;
+    margin: 5%;
+    padding: 5%;
+    background-color: #7478B9;
+}
+
+main div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#players {
+    display: flex;
+    flex-direction: row;
+}
+
+#p1 img, #p2 img, #dices img {
+    max-width: 45%;
+    height: auto;
+    margin-bottom: 8%;
+}
+
+#dices {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-top: 8%;
+}
+
+#dices img {
+    max-width: 15%;
+    height: auto;
+    padding-top: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+#actions {
+    padding-top: 8%;
+}
+
+.button {
+    text-decoration: none;
+    border: none;
+    margin-bottom: 2%;
+    padding: 2%;
+    color: #ffffff;
+    background-image: url(images/buttonbg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    font-size: 1.4em;
+    background-color: #7478B9;
+}
+
+.button:hover {
+    background-image: url(images/buttonhoverbg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+@media only screen and (min-width: 600px) {
+
+    body {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-areas: 
+        "A A A B B B B B"
+        "A A A B B B B B"
+        "A A A B B B B B"
+        "A A A B B B B B";
+    }
+
+    header {
+        grid-area: A;
+        padding-top: 70%;
+    }
+
+    main {
+        grid-area: B;
+    }
+
+    #dices img {
+        margin-bottom: 2%;
+    }
+
+    #dices {
+        padding-top: 2%;
+    }
+
+    #actions {
+        padding-top: 2%;
+    }
+
+    .button {
+        font-size: 2em;
+    }
+
+}
