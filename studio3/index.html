@@ -19,43 +19,47 @@
 
     <body>
         <header>
+    
             <img src="images/catfightlogo.png" alt="catfightlogo">
+            
         </header>
-
+    
         <main>
-
-            <div id="players">
-
+    
+            <div id="score">
                 <div id="p1">
                     <h2>CAT 1</h2>
-                    <img src="images/hp30.png" alt="hp30">
+                    <div id="p1hpbar">
+                        <img src="images/hp30.png" alt="hp30">
+                    </div>
                     <img src="images/cat1.png" alt="cat1">
                 </div>
-
+    
                 <div>
                     <h2>vs</h2>
                 </div>
     
                 <div id="p2">
                     <h2>CAT 2</h2>
-                    <img src="images/hp30.png" alt="hp30">
+                    <div id="p2hpbar">
+                        <img src="images/hp30.png" alt="hp30">
+                    </div>
                     <img src="images/cat2.png" alt="cat2">
                 </div>
-                
             </div>
-
-            <div id="dices">
-                <img src="images/startdice1.png" alt="startdice1">
-                <img src="images/startdice2.png" alt="startdice2">
+    
+            <div id="game"></div>
+    
+            <div id="actions"></div>
+    
+            <div id="score"></div>
+    
+            <div id="gamecontrol">
+                <button id="startgame">Start Game</button>
             </div>
-
-            <div id="actions">
-                <button type="button" class="button" id="rolldice">Roll Dice</button>
-                <button type="button" class="button" id="skipturn">Skip Turn</button>
-            </div>
-
+    
         </main>
-
+        
     </body>
 
 </html>
