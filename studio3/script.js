@@ -127,7 +127,6 @@
                         //game ends
                         if(gameData.score[gameData.index] > gameData.gameEnd){
                             actionArea.innerHTML = `<h2>${gameData.players[gameData.index]} wins!`;
-                            /*actionArea.innerHTML = `<h2>${gameData.players[gameData.index]} wins with ${gameData.score[gameData.index]} points!</h2>`;*/
                             document.getElementById('quit').innerHTML = "Play Again";
                             kitten.play();
                             
