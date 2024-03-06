@@ -1,11 +1,15 @@
 body {
     font-family: "Silkscreen", sans-serif;
-    font-weight: 1.4em;
+    font-size: 1em;
     font-style: normal;
     color: #ffffff;
     line-height: 1.5em;
     background: #8586BB;
     margin: auto;
+}
+
+#sources {
+    padding-top: 30%;
 }
 
 header {
@@ -64,13 +68,13 @@ main img {
 #game img {
     max-width: 20%;
     height: auto;
+    padding-left: 2%;
+    padding-right: 2%;
 }
 
 #gamecontrol {
     padding-top: 8%;
-    margin-top: 2%;
     border-top: 0.4em solid #8586BB;
-
 }
 
 #actions {
@@ -98,17 +102,49 @@ button:hover {
     background-position: center;
 }
 
+footer {
+    text-align: center;
+    padding-top: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+footer p a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+footer p a:hover {
+    color: #FBD5DD;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li a {
+    display: block;
+    padding: 2%;
+    text-decoration: none; 
+    color: #ffffff;
+    border-bottom: 0.2em solid #8586BB;
+}
+
+nav ul li a:hover {
+    color: #FBD5DD;
+}
+
 @media only screen and (min-width: 600px) {
 
     body {
-        padding: 50px;
+        padding: 0;
         display: grid;
         grid-template-columns: repeat(8, 1fr);
         grid-template-areas: 
         "A A A B B B B B"
         "A A A B B B B B"
         "A A A B B B B B"
-        "A A A B B B B B";
+        "C C C C C C C C";
     }
 
     header {
@@ -131,6 +167,16 @@ button:hover {
         height: auto;
     }
 
+    #p1 {
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+
+    #p2 {
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+
     #game img {
         margin-bottom: 2%;
         max-width: 15%;
@@ -151,6 +197,11 @@ button:hover {
 
     button {
         font-size: 2em;
+    }
+
+    footer {
+        grid-area: C;
+        text-align: right;
     }
 
 }

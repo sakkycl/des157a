@@ -8,6 +8,15 @@
     const actionArea = document.querySelector('#actions');
     const gameControl = document.querySelector('#gamecontrol');
     const startGame = document.querySelector('#startgame');
+
+    //sound effects
+    const kitten = new Audio('sounds/kitten3.mp3');
+    const catfight = new Audio('sounds/catfight.mp3');
+    const btnsound = new Audio('sounds/button-3.mp3');
+    const btns = document.querySelector('button');
+    btns.addEventListener('mousedown', function () {
+        btnsound.play();
+    });
     
     //track game data
     const gameData = {
@@ -69,6 +78,7 @@
             actionArea.innerHTML = `<button id="roll">Roll Dice</button>`;
             document.getElementById('roll').addEventListener('click', function(){
                 throwDice();
+                btnsound.play();
             });
 
             //throw dice
@@ -86,24 +96,28 @@
                     gameData.score[gameData.index] = 0;
                     gameData.index ? (gameData.index = 0) : (gameData.index = 1);
                     setTimeout(setUpTurn, 2000);
+                    catfight.play();
                 }
                 //rolled one 1
                 else if(gameData.roll1 === 1 || gameData.roll2 === 1){
                     gameData.index ? (gameData.index = 0) : (gameData.index = 1);
                     actionArea.innerHTML = `<p>Sorry, one of your rolls was a one, switching to ${gameData.players[gameData.index]}</p>`;
                     setTimeout(setUpTurn, 2000);
+                    catfight.play();
                 }
-                //no 1's
+                //rolled no 1's
                 else {
                     //roll again and skip turn button
                     gameData.score[gameData.index] = gameData.score[gameData.index] + gameData.rollSum;
                     actionArea.innerHTML = '<button id="rollagain">Roll Again</button> <button id="pass">Skip Turn</button>';
                     document.getElementById('rollagain').addEventListener('click', function(){
                         setUpTurn();
+                        btnsound.play();
                     });
                     document.getElementById('pass').addEventListener('click', function(){
                         gameData.index ? (gameData.index = 0) : (gameData.index = 1);
                         setUpTurn();
+                        btnsound.play();
                     });
 
                     //check winning condition 
@@ -112,8 +126,11 @@
 
                         //game ends
                         if(gameData.score[gameData.index] > gameData.gameEnd){
-                            actionArea.innerHTML = `<h2>${gameData.players[gameData.index]} wins with ${gameData.score[gameData.index]} points!</h2>`;
+                            actionArea.innerHTML = `<h2>${gameData.players[gameData.index]} wins!`;
+                            /*actionArea.innerHTML = `<h2>${gameData.players[gameData.index]} wins with ${gameData.score[gameData.index]} points!</h2>`;*/
                             document.getElementById('quit').innerHTML = "Play Again";
+                            kitten.play();
+                            
                         } else {
                             //show current score
                             showCurrentScore();
@@ -180,6 +197,8 @@
                                     document.getElementById("p2hpbar").innerHTML = '<img src="images/hp28.png" alt="hp28" id="hpbar">';
                                 } else if (gameData.score[0] === 1){
                                     document.getElementById("p2hpbar").innerHTML = '<img src="images/hp29.png" alt="hp29" id="hpbar">';
+                                } else if (gameData.score[0] === 0){
+                                    document.getElementById("p2hpbar").innerHTML = '<img src="images/hp30.png" alt="hp30" id="hpbar">';
                                 } else {
                                     document.getElementById("p2hpbar").innerHTML = '<img src="images/hp30.png" alt="hp30" id="hpbar">';
                                 }
@@ -245,6 +264,8 @@
                                     document.getElementById("p1hpbar").innerHTML = '<img src="images/hp28.png" alt="hp28" id="hpbar">';
                                 } else if (gameData.score[1] === 1){
                                     document.getElementById("p1hpbar").innerHTML = '<img src="images/hp29.png" alt="hp29" id="hpbar">';
+                                } else if (gameData.score[1] === 0){
+                                    document.getElementById("p1hpbar").innerHTML = '<img src="images/hp30.png" alt="hp30" id="hpbar">';
                                 } else {
                                     document.getElementById("p1hpbar").innerHTML = '<img src="images/hp30.png" alt="hp30" id="hpbar">';
                                 }
