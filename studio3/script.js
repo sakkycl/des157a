@@ -13,7 +13,6 @@
     const kitten = new Audio('sounds/kitten3.mp3');
     const catfight = new Audio('sounds/catfight.mp3');
     const btnsound = new Audio('sounds/button-3.mp3');
-    const btns = document.querySelector('button');
     
     //track game data
     const gameData = {
