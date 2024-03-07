@@ -14,9 +14,6 @@
     const catfight = new Audio('sounds/catfight.mp3');
     const btnsound = new Audio('sounds/button-3.mp3');
     const btns = document.querySelector('button');
-    btns.addEventListener('mousedown', function () {
-        btnsound.play();
-    });
     
     //track game data
     const gameData = {
@@ -45,6 +42,11 @@
     gameData.rollSum
     //winning threshold
     gameData.rollSum
+
+    //start game sound effect
+    startGame.addEventListener('mousedown', function () {
+        btnsound.play();
+    });
 
     //start game
     startGame.addEventListener("click", function(){
@@ -90,7 +92,7 @@
                 game.innerHTML = `<img src="${gameData.dice[gameData.roll1-1]}"> <img src="${gameData.dice[gameData.roll2-1]}">`;
                 gameData.rollSum = gameData.roll1 + gameData.roll2;
         
-                //rolled two 1's 
+                //rolled two 1's
                 if(gameData.rollSum === 2){
                     actionArea.innerHTML = `<p>Oh snap! Snake eyes!</p>`;
                     gameData.score[gameData.index] = 0;
@@ -120,7 +122,7 @@
                         btnsound.play();
                     });
 
-                    //check winning condition 
+                    //check winning condition
                     checkWinningCondition();
                     function checkWinningCondition(){
 
