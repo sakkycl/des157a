@@ -75,6 +75,18 @@ main {
     text-align: left;
 }
 
+#brief {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+#report {
+    display: flex;
+    align-items: flex-start;
+}
+
 main article {
     background-color: #F9EAEA;
     padding: 5%;
