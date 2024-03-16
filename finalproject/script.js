@@ -14,6 +14,7 @@
     const requiredMovement = 1;
     let initialX = null;
 
+    //swipe mouse interaction
     turnPage.addEventListener('mouseover', function(event){
         
         const { clientX } = event;
