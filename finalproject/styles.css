@@ -1,0 +1,153 @@
+body {
+    background-image: url(images/bgimage.png);
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: center;
+    color: #9E7859;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: left;
+}
+
+main {
+    background-color: #FEE3C9;
+    border: 3px solid #EECEAD;
+    border-radius: 15px;
+    margin: 5%;
+    padding-top: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+main img {
+    max-width: 20%;
+    height: auto;
+}
+
+#title {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2%;
+}
+
+#logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#nav {
+    text-align: center;
+    padding-top: 3%;
+    margin-right: 5%;
+}
+
+#nav img {
+    max-width: 100%;
+    height: auto;
+}
+
+#about {
+    border-radius: 15px;
+    color: #9E7859;
+    border-radius: 10px;
+    margin: 2%;
+    padding: 2%;
+    line-height: 1.5;
+}
+
+h1 {
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+#page {
+    text-align: center;
+    margin-bottom: -2%;
+    color: #9C6C43;
+    padding-left: 2%;
+    padding-right: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#page img {
+    max-width: 100%;
+    height: auto;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+@media only screen and (min-width: 600px) {
+
+    header {
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-top: 0;
+        padding-bottom: 0;
+        text-align: left;
+    }
+
+    main {
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-left: 3%;
+        padding-right: 3%;
+        margin: 3%;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-areas: 
+        "A A A A A A A A"
+        "B B B C C C C C"
+        "B B B C C C C C"
+        "B B B C C C C C";
+    }
+
+    main img {
+        max-width: 10%;
+        height: auto;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    #title {
+        grid-area: A;
+        font-size: 1.5em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 2%;
+        text-align: left;
+    }
+
+    #logo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #about {
+        grid-area: B;
+        display: block;
+        padding: 5%;
+    }
+
+    #page {
+        grid-area: C;
+    }
+
+    #page img {
+        max-width: 75%;
+        height: auto;
+    }
+}
