@@ -79,12 +79,41 @@ h2 {
     align-items: center;
 }
 
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+#arrow {
+    animation: fadeInOut 3s linear infinite;
+    max-width: 100%;
+    height: auto;
+    filter: drop-shadow(0px 0px 5px #9C6C43);
+}
+
+#page p {
+    margin-bottom: 55%;
+}
 #page img {
     max-width: 100%;
     height: auto;
     margin-left: 10%;
     margin-right: 10%;
-    margin-top: 0;
+    margin-top: -30%;
     margin-bottom: 0;
 }
 
